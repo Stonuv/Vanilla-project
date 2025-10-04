@@ -1,6 +1,6 @@
 $breakpoint-navigation-threshold: 900px;
 $color-accent: #7cf0ee;
-$font-base-family: 'Merriweather';
+// $font-base-family: 'Merriweather';
 
 // Vanilla Framework import + base include
 @import "vanilla-framework";
@@ -21,6 +21,7 @@ $font-base-family: 'Merriweather';
   background: currentColor;
   display: inline-block;
 }
+
 .brand__name {
   font-weight: 600;
 }
@@ -33,4 +34,27 @@ li {
 // helper to mark active nav link (pure CSS fallback)
 .p-navigation .p-navigation__link[aria-current="page"] {
   text-decoration: underline;
+}
+
+// Custom footer theme for the main page
+.site-footer {
+  background: #161920;
+  color: #f4f6f8;
+  padding: 2rem 1.5rem;
+  text-align: center;
+
+  p {
+    margin: .5rem 0;
+  }
+
+  a {
+    color: #8cc7ff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #b4dbff;
+      text-decoration: underline;
+    }
+  }
 }
