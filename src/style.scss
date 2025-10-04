@@ -1,0 +1,36 @@
+$breakpoint-navigation-threshold: 900px;
+$color-accent: #7cf0ee;
+$font-base-family: 'Merriweather';
+
+// Vanilla Framework import + base include
+@import "vanilla-framework";
+// Include the whole framework (patterns + utilities)
+@include vanilla;
+
+// Optional: small tweaks for the demo
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+}
+.brand__logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: currentColor;
+  display: inline-block;
+}
+.brand__name {
+  font-weight: 600;
+}
+
+li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+// helper to mark active nav link (pure CSS fallback)
+.p-navigation .p-navigation__link[aria-current="page"] {
+  text-decoration: underline;
+}

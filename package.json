@@ -1,0 +1,14 @@
+{
+  "name": "vanilla",
+  "packageManager": "yarn@4.9.2",
+  "dependencies": {
+    "vanilla-framework": "^4.34.1"
+  },
+  "devDependencies": {
+    "sass": "^1.79.6"
+  },
+  "scripts": {
+    "build-css": "sass --load-path=node_modules src:dist --style=compressed",
+    "watch-css": "yarn build-css && sass --load-path=node_modules --watch src:dist --style=compressed"
+  }
+}

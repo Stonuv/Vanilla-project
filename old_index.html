@@ -1,0 +1,80 @@
+    <!doctype html>
+    <html lang="ru">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Главная — My Vanilla Site</title>
+        <link rel="stylesheet" href="dist/style.css" />
+      </head>
+      <body>
+        <nav class="p-navigation" aria-label="Main navigation">
+  <div class="p-navigation__row p-navigation__row--25-75">
+    <div class="p-navigation__banner">
+      <div class="p-navigation__logo">
+        <a class="brand" href="index.html" aria-label="Home">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span class="brand__name">My Vanilla Site</span>
+        </a>
+      </div>
+      <a href="#navigation" class="p-navigation__toggle--open" aria-controls="navigation">Menu</a>
+      <a href="#navigation" class="p-navigation__toggle--close" aria-controls="navigation">Close</a>
+    </div>
+    <div class="p-navigation__nav" id="navigation" role="menubar">
+      <ul class="p-navigation__links" role="menu">
+        <li class="p-navigation__item" role="none"><a class="p-navigation__link" role="menuitem" href="index.html" data-page="home">Главная</a></li>
+        <li class="p-navigation__item" role="none"><a class="p-navigation__link" role="menuitem" href="about.html" data-page="about">О нас</a></li>
+        <li class="p-navigation__item" role="none"><a class="p-navigation__link" role="menuitem" href="services.html" data-page="services">Услуги</a></li>
+        <li class="p-navigation__item" role="none"><a class="p-navigation__link" role="menuitem" href="blog.html" data-page="blog">Блог</a></li>
+        <li class="p-navigation__item" role="none"><a class="p-navigation__link" role="menuitem" href="contact.html" data-page="contact">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+        <main>
+          <section class="p-strip">
+  <div class="grid-row">
+    <div class="grid-col-12">
+      <h1 class="p-heading--1">Привет, Vanilla 👋</h1>
+      <p class="p-heading--2">Быстрый старт: навигация, сетка и полосы (strips).</p>
+    </div>
+  </div>
+</section>
+<section class="p-strip is-deep">
+  <div class="grid-row">
+    <div class="grid-col-6">
+      <h2 class="p-heading--3">Почему Vanilla</h2>
+      <p>Опрятные паттерны, сетка и утилиты без излишеств. Отлично подходит для лендингов и приложений.</p>
+    </div>
+    <div class="grid-col-6">
+      <h2 class="p-heading--3">Что внутри</h2>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Адаптивная навигация</li>
+        <li class="p-list__item is-ticked">Сетка (.grid-row / .grid-col-*)</li>
+        <li class="p-list__item is-ticked">Компоненты: кнопки, формы, таблицы</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+        </main>
+        <footer class="p-strip is-shallow">
+  <div class="grid-row">
+    <div class="grid-col-12">
+      <p class="u-align-text--center">© 2025 My Vanilla Site</p>
+    </div>
+  </div>
+</footer>
+
+        <script>
+          // Mark the current page link
+          (function() {
+            var key = "home";
+            var links = document.querySelectorAll('.p-navigation__link[data-page]');
+            links.forEach(function(a) {
+              if (a.getAttribute('data-page') === key) a.setAttribute('aria-current', 'page');
+            });
+          })();
+        </script>
+      </body>
+    </html>
