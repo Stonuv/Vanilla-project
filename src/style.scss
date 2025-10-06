@@ -70,7 +70,8 @@ $color-accent: #7cf0ee;
 }
 
 .toc__title {
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
   margin: 0 0 1rem;
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -85,7 +86,7 @@ $color-accent: #7cf0ee;
 }
 
 .toc__list a {
-  color: #8cc7ff;
+  color: #f4f6f8;
   text-decoration: none;
   font-weight: 500;
 }
