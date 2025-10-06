@@ -1,6 +1,6 @@
 {
   "name": "vanilla",
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "yarn@1.22.22",
   "dependencies": {
     "vanilla-framework": "^4.34.1"
   },
