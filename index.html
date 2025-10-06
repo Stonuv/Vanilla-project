@@ -21,14 +21,27 @@
   </header>
 
   <main>
-    <section id="hero" class="hero">
-      <h1>Первые шаги к безопасности вашего веб-сайта</h1>
-      <p>
-        Статья MDN подчёркивает: серверная безопасность — это не отдельная функция, а постоянный процесс управления рисками, защитой данных
-        и поддержанием доверия пользователей. Начните с оценки того, что может пойти не так, и организуйте защиту до того, как возникнет инцидент.
-      </p>
-      <a class="hero__cta" href="https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security" target="_blank" rel="noopener">Читать оригинал на MDN</a>
-    </section>
+    <div class="page">
+      <article class="page__main" aria-labelledby="hero">
+        <section id="hero" class="hero">
+          <h1>Первые шаги к безопасности вашего веб-сайта</h1>
+          <p>
+            Статья MDN подчёркивает: серверная безопасность — это не отдельная функция, а постоянный процесс управления рисками, защитой данных
+            и поддержанием доверия пользователей. Начните с оценки того, что может пойти не так, и организуйте защиту до того, как возникнет инцидент.
+          </p>
+          <a class="hero__cta" href="https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security" target="_blank" rel="noopener">Читать оригинал на MDN</a>
+        </section>
+      </article>
+
+      <aside class="page__aside" aria-label="Навигация по статье">
+        <nav class="toc">
+          <h2 class="toc__title">Содержание</h2>
+          <ol class="toc__list">
+            <li><a href="#hero">Введение</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">
