@@ -62,7 +62,7 @@ $color-accent: #7cf0ee;
 }
 
 .toc {
-  background-color: #1f2330;
+  background-color: #161920;
   border: 1px solid rgba(244, 246, 248, .08);
   border-radius: 12px;
   padding: 1.5rem;
@@ -101,7 +101,11 @@ $color-accent: #7cf0ee;
   background-color: #161920;
   color: #f4f6f8;
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .p-navigation ul {
@@ -112,11 +116,30 @@ $color-accent: #7cf0ee;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
-.p-navigation .p-navigation__link,
-.p-navigation .brand {
+.navigation__logo,
+.p-navigation__item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__logo .logo,
+.p-navigation .p-navigation__link {
   color: #f4f6f8;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.navigation__logo .logo:hover,
+.navigation__logo .logo:focus,
+.p-navigation .p-navigation__link:hover,
+.p-navigation .p-navigation__link:focus {
+  color: #b4dbff;
 }
 
 // helper to mark active nav link (pure CSS fallback)
