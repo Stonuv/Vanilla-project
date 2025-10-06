@@ -25,10 +25,26 @@ $color-accent: #7cf0ee;
 .brand__name {
   font-weight: 600;
 }
+.p-navigation {
+  background-color: #161920;
+  color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+}
 
-.p-navigation .p-navigation__item {
-  display: inline-block;
-  margin-left: 10px;
+.p-navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.p-navigation .p-navigation__link,
+.p-navigation .brand {
+  color: #f4f6f8;
 }
 
 // helper to mark active nav link (pure CSS fallback)
@@ -38,7 +54,7 @@ $color-accent: #7cf0ee;
 
 // Custom footer theme for the main page
 .site-footer {
-  background: #161920;
+  background-color: #161920;
   color: #f4f6f8;
   padding: 2rem 1.5rem;
   text-align: center;
