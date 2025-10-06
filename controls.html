@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/style.css">
+  <title>Меры защиты веб-сайта</title>
+</head>
+<body>
+  <header>
+    <nav class="p-navigation" aria-label="Основная навигация">
+      <ul>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="index.html" data-page="hero">Введение</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="importance.html" data-page="importance">Почему важно</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="risks.html" data-page="risks">Угрозы</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" aria-current="page" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <header class="hero">
+      <h1>Практические меры защиты</h1>
+      <p>
+        MDN рекомендует строить безопасность слоями: обрабатывайте ввод, защищайте каналы связи, контролируйте доступ и поддерживайте инфраструктуру.
+        Эти направления помогают закрыть основные типы атак.
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>Обработка данных</h2>
+      <p>
+        Используйте белые списки допустимых значений, строгую типизацию и подготовленные выражения. Экранируйте вывод в зависимости от контекста,
+        чтобы предотвратить XSS, внедрение XML/JSON и иные инъекционные атаки.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Управление доступом</h2>
+      <p>
+        Реализуйте проверенные механизмы аутентификации, храните пароли в виде хэш-сумм с солью, ограничивайте число попыток входа
+        и регулярно пересматривайте роли согласно принципу наименьших привилегий.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Безопасность транспорта</h2>
+      <p>
+        Включите HTTPS и HSTS, следите за актуальностью шифросьютов. Контентные заголовки (CSP, X-Frame-Options, X-Content-Type-Options)
+        снижают вероятность XSS, clickjacking и подмены MIME-типов.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Инфраструктура и наблюдаемость</h2>
+      <p>
+        Разделяйте окружения, обновляйте ОС, веб-серверы и CMS. Внедряйте централизованный сбор логов, алерты и регулярные проверки резервных копий,
+        чтобы быстро реагировать на инциденты.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Безопасность Web-ресурсов.</p>
+    <p><a href="mailto:stonuv@gmail.com">Связаться с командой</a></p>
+  </footer>
+</body>
+</html>

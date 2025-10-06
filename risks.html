@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/style.css">
+  <title>Типовые угрозы для сайта</title>
+</head>
+<body>
+  <header>
+    <nav class="p-navigation" aria-label="Основная навигация">
+      <ul>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="index.html" data-page="hero">Введение</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="importance.html" data-page="importance">Почему важно</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" aria-current="page" href="risks.html" data-page="risks">Угрозы</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <header class="hero">
+      <h1>Основные угрозы по версии MDN</h1>
+      <p>
+        Первым шагом безопасности является понимание атакующих поверхностей. MDN советует проанализировать формы, механизмы логина,
+        файловые загрузки и сторонние интеграции — именно здесь чаще всего возникают критические уязвимости.
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>Поверхности атаки</h2>
+      <dl>
+        <dt>Пользовательский ввод</dt>
+        <dd>Нормализация и фильтрация пропускаются — открывая путь SQL-инъекциям, XSS и десериализации.</dd>
+        <dt>Аутентификация и сессии</dt>
+        <dd>Слабые пароли, отсутствие MFA и неправильные cookie позволяют злоумышленникам захватывать учётные записи.</dd>
+        <dt>Загрузки и включения файлов</dt>
+        <dd>Без проверки типов и расположения файлы могут использоваться для удалённого выполнения кода.</dd>
+        <dt>Сторонние зависимости</dt>
+        <dd>Плагины, библиотеки и сервисы необходимо обновлять и проверять на наличие известных уязвимостей.</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <h2>Дополнительные факторы риска</h2>
+      <ul>
+        <li>Ошибки конфигурации, оставленные по умолчанию, раскрывают структуры каталогов и технологический стек.</li>
+        <li>Избыточные привилегии сервисных аккаунтов повышают ущерб от SQL-инъекций и компрометации.</li>
+        <li>Отсутствие мониторинга лишает возможности быстро обнаружить атаку и минимизировать последствия.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Безопасность Web-ресурсов.</p>
+    <p><a href="mailto:stonuv@gmail.com">Связаться с командой</a></p>
+  </footer>
+</body>
+</html>

@@ -25,6 +25,22 @@ $color-accent: #7cf0ee;
 .brand__name {
   font-weight: 600;
 }
+
+.hero {
+  margin: 0 auto;
+  max-width: 60ch;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.hero p {
+  margin: 1rem 0;
+}
+
+.hero__cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
 .p-navigation {
   background-color: #161920;
   color: #f4f6f8;

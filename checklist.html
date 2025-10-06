@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/style.css">
+  <title>Чек-лист безопасности</title>
+</head>
+<body>
+  <header>
+    <nav class="p-navigation" aria-label="Основная навигация">
+      <ul>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="index.html" data-page="hero">Введение</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="importance.html" data-page="importance">Почему важно</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="risks.html" data-page="risks">Угрозы</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" aria-current="page" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <header class="hero">
+      <h1>Стартовый чек-лист по MDN</h1>
+      <p>
+        Используйте этот список, чтобы убедиться, что базовые требования безопасности закрыты. Регулярно пересматривайте его вместе с командой
+        и обновляйте процессы по мере роста проекта.
+      </p>
+    </header>
+
+    <section class="section section--accent">
+      <ol>
+        <li>Составьте карту данных: что храните, где храните, кто имеет к этому доступ.</li>
+        <li>Обеспечьте шифрование трафика: HTTPS, сертификаты, безопасные каналы между сервисами.</li>
+        <li>Укрепите формы: валидация, нормализация, CSRF-токены и ограничение размера запросов.</li>
+        <li>Разверните резервное копирование и регулярно проверяйте сценарии восстановления.</li>
+        <li>Определите процесс реагирования: контакты ответственных, шаги уведомления и юридические требования.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Безопасность Web-ресурсов.</p>
+    <p><a href="mailto:stonuv@gmail.com">Связаться с командой</a></p>
+  </footer>
+</body>
+</html>

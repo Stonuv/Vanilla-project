@@ -1,94 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dist/style.css">
-  <title>Main</title>
+  <title>Безопасность веб-сайта</title>
 </head>
 <body>
   <header>
-    <nav class="p-navigation" aria-label="Main navigation">
+    <nav class="p-navigation" aria-label="Основная навигация">
       <ul>
-        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="#hero" data-page="home">Главная</a></li>
-        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="#pillars" data-page="pillars">Столпы</a></li>
-        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="threats.html" data-page="threats">Угрозы</a></li>
-        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="#practices" data-page="practices">Практики и чек-листы</a></li>
-        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="#resources" data-page="resources">Ресурсы</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="#hero" data-page="hero">Введение</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="importance.html" data-page="importance">Почему важно</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="risks.html" data-page="risks">Угрозы</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="resources.html" data-page="resources">Ресурсы</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="hero" class="hero">
-      <h1>Безопасность Web-ресурсов</h1>
+      <h1>Первые шаги к безопасности вашего веб-сайта</h1>
       <p>
-        Защита сайта начинается с понимания того, какие данные он обрабатывает и кто к ним стремится получить доступ.
-        На этой странице собраны ключевые подходы, которые помогут построить надежную оборону и вовремя реагировать на инциденты.
+        Статья MDN подчёркивает: серверная безопасность — это не отдельная функция, а постоянный процесс управления рисками, защитой данных
+        и поддержанием доверия пользователей. Начните с оценки того, что может пойти не так, и организуйте защиту до того, как возникнет инцидент.
       </p>
-      <a class="hero__cta" href="basics.html">С чего начать</a>
-    </section>
-
-    <section id="pillars" aria-labelledby="pillars-title" class="pillars">
-      <h2 id="pillars-title">Три столпа защиты</h2>
-      <div class="pillars__grid">
-        <article class="pillars__item">
-          <h3>Предотвращение</h3>
-          <p>
-            Минимизируйте поверхность атаки: обновляйте зависимости, внедряйте защиту от XSS и CSRF, применяйте заголовки безопасности.
-          </p>
-        </article>
-        <article class="pillars__item">
-          <h3>Обнаружение</h3>
-          <p>
-            Логи, мониторинг и алармы позволяют увидеть атаки в реальном времени и быстрее изолировать источник проблемы.
-          </p>
-        </article>
-        <article class="pillars__item">
-          <h3>Реагирование</h3>
-          <p>
-            Готовые плейбуки, резервные копии и план восстановления делают инциденты контролируемыми и сокращают простой.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="threats" aria-labelledby="threats-title" class="threats">
-      <h2 id="threats-title">Типовые угрозы</h2>
-      <ul class="threats__list">
-        <li><strong>SQL-инъекции:</strong> эксплуатация недостатков в запросах к базе данных.</li>
-        <li><strong>XSS:</strong> внедрение вредоносного кода в доверенный интерфейс.</li>
-        <li><strong>Утечки данных:</strong> несовершенная конфигурация облачных хранилищ и служб.</li>
-        <li><strong>Brute-force:</strong> подбор паролей из-за отсутствия ограничений и MFA.</li>
-      </ul>
-    </section>
-
-    <section id="practices" aria-labelledby="practices-title" class="practices">
-      <h2 id="practices-title">Практики и чек-листы</h2>
-      <ol class="practices__list">
-        <li>Проверьте, что используется HTTPS с актуальными сертификатами.</li>
-        <li>Настройте Content Security Policy и заголовок Strict-Transport-Security.</li>
-        <li>Проведите аудит прав доступа и включите многофакторную аутентификацию.</li>
-        <li>Регулярно выполняйте проверку кода и автоматизированное тестирование безопасности.</li>
-        <li>Заведите план реагирования и ответственную команду.</li>
-      </ol>
-    </section>
-
-    <section id="resources" aria-labelledby="resources-title" class="resources">
-      <h2 id="resources-title">Полезные ресурсы</h2>
-      <ul class="resources__list">
-        <li><a href="https://owasp.org" rel="noopener" target="_blank">OWASP Top 10</a> — актуальные риски для web-приложений.</li>
-        <li><a href="https://cwe.mitre.org" rel="noopener" target="_blank">CWE</a> — база распространенных ошибок безопасности.</li>
-        <li><a href="https://securitytxt.org" rel="noopener" target="_blank">security.txt</a> — рекомендация по контакту с исследователями.</li>
-        <li><a href="https://letsencrypt.org" rel="noopener" target="_blank">Let’s Encrypt</a> — бесплатные TLS-сертификаты.</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="quote-title" class="quote">
-      <h2 id="quote-title">Ключевая мысль</h2>
-      <blockquote>
-        «Безопасность — это процесс, а не продукт. Развивайтесь быстрее, чем ваш противник».
-      </blockquote>
+      <a class="hero__cta" href="https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security" target="_blank" rel="noopener">Читать оригинал на MDN</a>
     </section>
   </main>
 
