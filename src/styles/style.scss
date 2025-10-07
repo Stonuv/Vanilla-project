@@ -124,6 +124,12 @@ $color-accent: #7cf0ee;
   color: #f4f6f8;
 }
 
+.p-navigation .p-navigation__link:hover,
+.p-navigation .p-navigation__link:focus {
+  background-color: transparent;
+  color: #f4f6f8;
+}
+
 // helper to mark active nav link (pure CSS fallback)
 .p-navigation .p-navigation__link[aria-current="page"] {
   text-decoration: underline;
