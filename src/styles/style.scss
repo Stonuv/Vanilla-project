@@ -132,12 +132,11 @@ $custom-breakpoints: (
 .p-navigation {
   background-color: #161920;
   color: #f4f6f8;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 1rem 1.5rem;
-  flex-wrap: wrap;
 
   &.is-open .p-navigation__list {
     display: grid;
@@ -156,6 +155,8 @@ $custom-breakpoints: (
   color: inherit;
   padding: .5rem .75rem;
   cursor: pointer;
+  justify-self: end;
+  align-self: center;
 
   &:hover,
   &:focus-visible {
@@ -199,6 +200,7 @@ $custom-breakpoints: (
   border-radius: 12px;
   display: none;
   gap: 1rem;
+  grid-column: 1 / -1;
 }
 
 .p-navigation__item {
@@ -211,8 +213,8 @@ $custom-breakpoints: (
   }
 
   .p-navigation {
-    justify-content: center;
-    gap: 2rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
   }
 
   .p-navigation__list {
@@ -226,10 +228,13 @@ $custom-breakpoints: (
     padding: 0;
     width: auto;
     gap: 1.5rem;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
   }
 
   .p-navigation__item {
-    text-align: left;
+    text-align: center;
   }
 }
 
