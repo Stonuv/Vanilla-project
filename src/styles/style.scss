@@ -11,15 +11,16 @@ $color-accent: #7cf0ee;
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
+  gap: .75rem;
   text-decoration: none;
 }
+
 .brand__logo {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: currentColor;
-  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
 }
 
 .brand__name {
@@ -101,7 +102,11 @@ $color-accent: #7cf0ee;
   background-color: #161920;
   color: #f4f6f8;
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
 }
 
 .p-navigation ul {
