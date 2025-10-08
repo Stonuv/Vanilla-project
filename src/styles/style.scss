@@ -8,6 +8,8 @@ $custom-breakpoints: (
   gte-992: 992px,
 );
 
+$layout-max-width: 1140px;
+
 @mixin breakpoint($name) {
   $value: map-get($custom-breakpoints, $name);
 
@@ -63,7 +65,7 @@ $custom-breakpoints: (
 
 .page {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: $layout-max-width;
   padding: 2rem 1.5rem 4rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
@@ -137,6 +139,9 @@ $custom-breakpoints: (
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: $layout-max-width;
+  margin: 0 auto;
 
   &.is-open .p-navigation__list {
     display: grid;
@@ -215,6 +220,7 @@ $custom-breakpoints: (
   .p-navigation {
     grid-template-columns: auto 1fr;
     align-items: center;
+    gap: 2rem;
   }
 
   .p-navigation__list {
@@ -265,7 +271,7 @@ $custom-breakpoints: (
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
-    max-width: 760px;
+    max-width: $layout-max-width;
     margin: 0 auto;
   }
 
