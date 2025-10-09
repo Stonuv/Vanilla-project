@@ -24,6 +24,23 @@
         <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
         <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
         <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="more-pages-menu"
+          >
+            Дополнительно
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="more-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="monitoring.html" data-page="monitoring">Мониторинг и аудит</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="incident-response.html" data-page="incident-response">Реагирование на инциденты</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="policy.html" data-page="policy">Обучение и политика</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
