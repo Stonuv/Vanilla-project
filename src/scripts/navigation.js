@@ -11,7 +11,17 @@
 
     const dropdownControllers = [];
 
-    function closeAllDropdowns(exceptTrigger) {
+    function closeAllDropdowns(config) {
+      let exceptTrigger = null;
+      let immediate = false;
+
+      if (config instanceof Element) {
+        exceptTrigger = config;
+      } else if (config && typeof config === 'object') {
+        exceptTrigger = config.exceptTrigger || null;
+        immediate = Boolean(config.immediate);
+      }
+
       dropdownControllers.forEach((controller) => {
         if (!controller) {
           return;
@@ -21,7 +31,7 @@
           return;
         }
 
-        controller.close();
+        controller.close({ immediate });
       });
     }
 
@@ -37,16 +47,64 @@
 
       submenu.hidden = true;
 
+      let pendingCloseHandler = null;
+
       function openDropdown() {
-        item.classList.add('is-expanded');
+        if (pendingCloseHandler) {
+          submenu.removeEventListener('transitionend', pendingCloseHandler);
+          pendingCloseHandler = null;
+        }
+
+        if (!submenu.hidden && item.classList.contains('is-expanded')) {
+          return;
+        }
+
         dropdownToggle.setAttribute('aria-expanded', 'true');
         submenu.hidden = false;
+
+        requestAnimationFrame(() => {
+          item.classList.add('is-expanded');
+        });
       }
 
-      function closeDropdown() {
-        item.classList.remove('is-expanded');
+      function closeDropdown({ immediate = false } = {}) {
+        if (pendingCloseHandler) {
+          submenu.removeEventListener('transitionend', pendingCloseHandler);
+          pendingCloseHandler = null;
+        }
+
+        if (submenu.hidden && !item.classList.contains('is-expanded')) {
+          dropdownToggle.setAttribute('aria-expanded', 'false');
+          return;
+        }
+
+        const shouldCloseImmediately = immediate || !desktopMediaQuery.matches;
+
         dropdownToggle.setAttribute('aria-expanded', 'false');
-        submenu.hidden = true;
+
+        if (shouldCloseImmediately) {
+          item.classList.remove('is-expanded');
+          submenu.hidden = true;
+          return;
+        }
+
+        if (!item.classList.contains('is-expanded')) {
+          submenu.hidden = true;
+          return;
+        }
+
+        pendingCloseHandler = (event) => {
+          if (event.target !== submenu || event.propertyName !== 'opacity') {
+            return;
+          }
+
+          submenu.hidden = true;
+          submenu.removeEventListener('transitionend', pendingCloseHandler);
+          pendingCloseHandler = null;
+        };
+
+        submenu.addEventListener('transitionend', pendingCloseHandler);
+        item.classList.remove('is-expanded');
       }
 
       dropdownToggle.addEventListener('click', (event) => {
@@ -56,7 +114,7 @@
         if (isExpanded) {
           closeDropdown();
         } else {
-          closeAllDropdowns(dropdownToggle);
+          closeAllDropdowns({ exceptTrigger: dropdownToggle });
           openDropdown();
         }
       });
@@ -86,7 +144,7 @@
 
     const handleDocumentClick = (event) => {
       if (!nav.contains(event.target)) {
-        closeAllDropdowns();
+        closeAllDropdowns({ immediate: false });
       }
     };
 
@@ -102,14 +160,14 @@
       nav.classList.add('is-open');
       toggle.setAttribute('aria-expanded', 'true');
       menu.hidden = false;
-      closeAllDropdowns();
+      closeAllDropdowns({ immediate: true });
     }
 
     function closeMenu() {
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
       menu.hidden = true;
-      closeAllDropdowns();
+      closeAllDropdowns({ immediate: true });
     }
 
     function syncMenuToViewport() {
@@ -117,10 +175,10 @@
         nav.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
         menu.hidden = false;
-        closeAllDropdowns();
+        closeAllDropdowns({ immediate: true });
       } else if (!nav.classList.contains('is-open')) {
         menu.hidden = true;
-        closeAllDropdowns();
+        closeAllDropdowns({ immediate: true });
       }
     }
 
