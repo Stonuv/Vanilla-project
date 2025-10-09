@@ -45,6 +45,13 @@ $layout-max-width: 1140px;
 body {
   font-family: 'Inter', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 
@@ -62,16 +69,14 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  display: block;
   object-fit: contain;
 }
 
 .brand__name {
   font-weight: 600;
   line-height: 1.1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
 }
 
 .hero {
