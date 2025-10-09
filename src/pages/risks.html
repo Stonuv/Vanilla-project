@@ -18,9 +18,23 @@
         <span class="u-visually-hidden">Меню</span>
       </button>
       <ul class="p-navigation__list" id="primary-menu" role="menu">
-        <li class="p-navigation__item"><a class="p-navigation__link" href="../../index.html" data-page="hero">Введение</a></li>
-        <li class="p-navigation__item"><a class="p-navigation__link" href="importance.html" data-page="importance">Почему важно</a></li>
-        <li class="p-navigation__item"><a class="p-navigation__link" aria-current="page" href="risks.html" data-page="risks">Угрозы</a></li>
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="intro-pages-menu"
+          >
+            Введение
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="intro-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="../../index.html" data-page="hero">Главная</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="importance.html" data-page="importance">Почему важно</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" aria-current="page" role="menuitem" href="risks.html" data-page="risks">Угрозы</a></li>
+          </ul>
+        </li>
         <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
         <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
         <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
@@ -31,11 +45,11 @@
             role="menuitem"
             aria-haspopup="true"
             aria-expanded="false"
-            aria-controls="more-pages-menu"
+            aria-controls="extra-pages-menu"
           >
             Дополнительно
           </button>
-          <ul class="p-navigation__submenu js-dropdown-menu" id="more-pages-menu" role="menu" hidden>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="extra-pages-menu" role="menu" hidden>
             <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="monitoring.html" data-page="monitoring">Мониторинг и аудит</a></li>
             <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="incident-response.html" data-page="incident-response">Реагирование на инциденты</a></li>
             <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="policy.html" data-page="policy">Обучение и политика</a></li>
