@@ -9,15 +9,16 @@
 <body>
   <header>
     <nav class="p-navigation" aria-label="Основная навигация">
-      <a class="brand" href="../../index.html">
-        <img class="brand__logo" src="../images/logo.png" alt="Логотип — Безопасность Web-ресурсов" width="40" height="40">
-        <span class="brand__name">Безопасность Web-ресурсов</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
-        <span class="nav-toggle__icon" aria-hidden="true"></span>
-        <span class="u-visually-hidden">Меню</span>
-      </button>
-      <ul class="p-navigation__list" id="primary-menu" role="menu">
+      <div class="p-navigation__inner">
+        <a class="brand" href="../../index.html">
+          <img class="brand__logo" src="../images/logo.png" alt="Логотип — Безопасность Web-ресурсов" width="40" height="40">
+          <span class="brand__name">Безопасность Web-ресурсов</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="u-visually-hidden">Меню</span>
+        </button>
+        <ul class="p-navigation__list" id="primary-menu" role="menu">
         <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
           <button
             class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
@@ -55,7 +56,8 @@
             <li class="p-navigation__submenu-item"><a class="p-navigation__link" aria-current="page" role="menuitem" href="policy.html" data-page="policy">Обучение и политика</a></li>
           </ul>
         </li>
-      </ul>
+        </ul>
+      </div>
     </nav>
   </header>
 

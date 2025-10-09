@@ -166,6 +166,14 @@ body {
 .p-navigation {
   background-color: #161920;
   color: #f4f6f8;
+
+  &.is-open .p-navigation__list {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+
+.p-navigation__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
@@ -174,11 +182,6 @@ body {
   width: 100%;
   max-width: $layout-max-width;
   margin: 0 auto;
-
-  &.is-open .p-navigation__list {
-    display: grid;
-    grid-auto-flow: row;
-  }
 }
 
 .nav-toggle {
@@ -249,7 +252,7 @@ body {
     display: none;
   }
 
-  .p-navigation {
+  .p-navigation__inner {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 2rem;
