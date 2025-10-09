@@ -53,6 +53,9 @@ body {
   align-items: center;
   gap: .75rem;
   text-decoration: none;
+  min-height: 40px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .brand__logo {
@@ -65,6 +68,10 @@ body {
 
 .brand__name {
   font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero {
@@ -185,14 +192,15 @@ body {
 }
 
 .p-navigation__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.5rem;
   width: 100%;
   max-width: $layout-max-width;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .nav-toggle {
@@ -204,10 +212,12 @@ body {
   border: 1px solid rgba(244, 246, 248, .32);
   border-radius: 8px;
   color: inherit;
-  padding: .5rem .75rem;
+  padding: 0 .75rem;
+  height: 40px;
   cursor: pointer;
   justify-self: end;
   align-self: center;
+  margin: auto;
 
   &:hover,
   &:focus-visible {
@@ -251,7 +261,6 @@ body {
   border-radius: 12px;
   display: none;
   gap: 1rem;
-  grid-column: 1 / -1;
   justify-items: center;
 }
 
@@ -266,9 +275,11 @@ body {
 @include breakpoint(gte-992) {
   .nav-toggle {
     display: none;
+    margin-left: 0;
   }
 
   .p-navigation__inner {
+    display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 2rem;
