@@ -86,6 +86,7 @@ body {
   padding: 2rem 1.5rem 4rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  grid-template-areas: "main aside";
   gap: 2.5rem;
   align-items: start;
 }
@@ -107,10 +108,12 @@ body {
 }
 
 .page__main {
+  grid-area: main;
   min-width: 0;
 }
 
 .page__aside {
+  grid-area: aside;
   position: sticky;
   top: 2rem;
 }
@@ -441,10 +444,14 @@ body {
 @media (max-width: 960px) {
   .page {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "aside"
+      "main";
   }
 
   .page__aside {
     position: static;
+    margin-bottom: 2rem;
   }
 
   .hero {
