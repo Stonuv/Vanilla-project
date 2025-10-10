@@ -382,8 +382,8 @@ main {
   content: "";
   width: .4rem;
   height: .4rem;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
   transition: transform .2s ease;
 }
