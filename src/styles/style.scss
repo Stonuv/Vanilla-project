@@ -24,12 +24,10 @@ $layout-max-width: 1140px;
   }
 }
 
-// Vanilla Framework import + base include
+
 @import "vanilla-framework";
-// Include the whole framework (patterns + utilities)
 @include vanilla;
 
-// Optional: small tweaks for the demo
 
 body {
   font-family: 'Inter', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
@@ -433,12 +431,10 @@ main {
   outline-offset: 2px;
 }
 
-// helper to mark active nav link (pure CSS fallback)
 .p-navigation__link[aria-current="page"] {
   text-decoration: underline;
 }
 
-// Custom footer theme for the main page
 .site-footer {
   background-color: $color-background-dark;
   color: $color-text-light;
