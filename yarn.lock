@@ -840,7 +840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.93.2":
+"sass@npm:^1.79.6":
   version: 1.93.2
   resolution: "sass@npm:1.93.2"
   dependencies:
@@ -1036,7 +1036,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla@workspace:."
   dependencies:
-    sass: "npm:^1.93.2"
+    sass: "npm:^1.79.6"
     vanilla-framework: "npm:^4.34.1"
   languageName: unknown
   linkType: soft
