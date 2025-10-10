@@ -133,6 +133,25 @@ main {
   top: 2rem;
 }
 
+.section-illustration {
+  margin: 2rem auto 0;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-illustration__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.section-illustration figcaption {
+  margin-top: .75rem;
+  font-size: .9rem;
+}
+
 .toc {
   background-color: $color-surface-dark;
   border: 1px solid rgba(244, 246, 248, .08);
