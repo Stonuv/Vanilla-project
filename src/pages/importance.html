@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/styles/style.css">
+  <title>Почему важна безопасность сайта</title>
+</head>
+<body>
+  <header>
+    <nav class="p-navigation" aria-label="Основная навигация">
+      <div class="p-navigation__inner">
+        <a class="brand" href="../../index.html">
+          <img class="brand__logo" src="../images/logo.png" alt="Логотип — Безопасность Web-ресурсов" width="40" height="40">
+          <span class="brand__name">Безопасность Web-ресурсов</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="u-visually-hidden">Меню</span>
+        </button>
+        <ul class="p-navigation__list" id="primary-menu" role="menu">
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="intro-pages-menu"
+          >
+            Введение
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="intro-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="../../index.html" data-page="hero">Главная</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" aria-current="page" role="menuitem" href="importance.html" data-page="importance">Почему важно</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="risks.html" data-page="risks">Угрозы</a></li>
+          </ul>
+        </li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="extra-pages-menu"
+          >
+            Дополнительно
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="extra-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="monitoring.html" data-page="monitoring">Мониторинг и аудит</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="incident-response.html" data-page="incident-response">Реагирование на инциденты</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="policy.html" data-page="policy">Обучение и политика</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page">
+      <article class="page__main" aria-labelledby="hero">
+        <header id="hero" class="hero">
+          <h1>Почему безопасность сайта так важна</h1>
+          <p>
+            MDN подчёркивает: каждое нарушение безопасности ведёт к финансовым издержкам, потере доверия и юридическим обязательствам.
+            Профилактика дешевле восстановления, поэтому безопасность должна быть встроенным требованием к любому веб-проекту.
+          </p>
+        </header>
+
+        <section id="importance-reasons" class="section">
+          <h2>Ключевые причины действовать заранее</h2>
+          <ul>
+            <li>Утечки данных приводят к штрафам и обязательствам перед регуляторами и пользователями.</li>
+            <li>Компрометация сайта подрывает доверие: клиенты уходят, когда видят предупреждения браузера или фишинговый контент.</li>
+            <li>Восстановление без плана занимает дни: простои стоят дороже, чем внедрение защитных мер заранее.</li>
+          </ul>
+        </section>
+
+        <section id="importance-business" class="section">
+          <h2>Бизнес-эффект безопасности</h2>
+          <p>
+            Надёжность сайта укрепляет бренд и позволяет безопасно расширять функциональность. Защита данных — ключевое условие для
+            e-commerce, SaaS и любых сервисов, работающих с персональной или платёжной информацией.
+          </p>
+          <p>
+            Регулярное обновление зависимостей, аудит конфигураций и обучение команды — это инвестиции, которые окупаются
+            отсутствием судебных исков и репутационных потерь.
+          </p>
+          <figure class="section-illustration">
+            <img
+              class="section-illustration__image"
+              src="../images/investing.png"
+              srcset="../images/investing-480.png 480w, ../images/investing-640.png 640w, ../images/investing.png 1200w"
+              sizes="(min-width: 900px) 360px, (min-width: 620px) 70vw, 90vw"
+              width="640"
+              height="400"
+              loading="lazy"
+              alt="График роста и щит, символизирующие инвестиции в безопасность"
+            >
+            <figcaption>Инвестиции в безопасность позволяют масштабировать продукт без потери доверия и данных клиентов.</figcaption>
+          </figure>
+        </section>
+
+        <section id="importance-regulations" class="section">
+          <h2>Регуляторные требования и ответственность</h2>
+          <p>
+            Тренд последних лет — ужесточение норм по защите персональных данных и критической информации. GDPR в ЕС,
+            152-ФЗ и ФЗ-187 в России, CCPA в Калифорнии и аналогичные акты в других странах требуют документально подтверждать,
+            что компания контролирует риски и обеспечивает права пользователей.
+          </p>
+          <p>
+            Несоответствие приводит не только к штрафам. Регулятор может ограничить обработку данных, а партнёры — расторгнуть
+            договор из-за угрозы совместным проектам. Поэтому важно заранее готовить реестр активов, план реагирования на инциденты,
+            описывать процессы и назначать ответственных за безопасность.
+          </p>
+          <ul>
+            <li>Проводите периодические аудиты и храните отчёты, чтобы быстро подтверждать зрелость процессов.</li>
+            <li>Создайте карту потоков данных: какие системы собирают, передают и хранят чувствительную информацию.</li>
+            <li>Обновляйте пользовательские соглашения и уведомления, чтобы прозрачность оставалась на стороне клиента.</li>
+          </ul>
+        </section>
+
+        <section id="importance-culture" class="section">
+          <h2>Культура безопасности как стратегический актив</h2>
+          <p>
+            Ни один инструмент не заменит внимательного сотрудника. Регулярные тренинги, рассылки об актуальных угрозах и игровые
+            практики (например, симулированный фишинг) формируют привычки, которые спасают, когда происходит настоящий инцидент.
+          </p>
+          <p>
+            Поддержка руководства критична: безопасность должна присутствовать в OKR и метриках команд, а лучшие инициативы —
+            поощряться публично. Когда разработчики и продуктовые менеджеры понимают, что безопасность — общий приоритет, они закладывают
+            её в проект с первых спринтов.
+          </p>
+          <blockquote>
+            <p>«Люди — первая линия обороны. Их знания и вовлечённость определяют, насколько быстро мы реагируем на угрозы».</p>
+            <cite>— Руководитель службы ИБ технологической компании</cite>
+          </blockquote>
+          <figure class="section-illustration">
+            <img
+              class="section-illustration__image"
+              src="../images/security.png"
+              srcset="../images/security-480.png 480w, ../images/security-640.png 640w, ../images/security.png 1200w"
+              sizes="(min-width: 900px) 360px, (min-width: 620px) 70vw, 90vw"
+              width="640"
+              height="400"
+              loading="lazy"
+              alt="Команда и сеть узлов, иллюстрирующие совместную работу над безопасностью"
+            >
+            <figcaption>Совместная работа и обмен знаниями усиливают сетевую защиту и устойчивость процессов.</figcaption>
+          </figure>
+        </section>
+      </article>
+
+      <aside class="page__aside" aria-label="Навигация по статье">
+        <nav class="toc">
+          <h2 class="toc__title">Содержание</h2>
+          <ol class="toc__list">
+            <li><a href="#hero">Почему важно</a></li>
+            <li><a href="#importance-reasons">Причины действовать</a></li>
+            <li><a href="#importance-business">Бизнес-эффект</a></li>
+            <li><a href="#importance-regulations">Регуляторные требования</a></li>
+            <li><a href="#importance-culture">Культура безопасности</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__columns">
+      <div class="site-footer__column">
+        <p>© 2025 Безопасность Web-ресурсов. Все права защищены.</p>
+        <p>Ознакомление с основами безопасности Web-ресурсов</p>
+        <p><a href="mailto:stonuv@gmail.com">Связаться с командой</a></p>
+      </div>
+
+      <div class="site-footer__column">
+        <p>Vanilla framework</p>
+        <p><a href="https://vanillaframework.io/">Официальный сайт фреймворка</a></p>
+        <p><a href="https://github.com/canonical/vanilla-framework">Vanilla framework github</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../scripts/navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/styles/style.css">
+  <title>План реагирования на инциденты</title>
+</head>
+<body>
+  <header>
+    <nav class="p-navigation" aria-label="Основная навигация">
+      <div class="p-navigation__inner">
+        <a class="brand" href="../../index.html">
+          <img class="brand__logo" src="../images/logo.png" alt="Логотип — Безопасность Web-ресурсов" width="40" height="40">
+          <span class="brand__name">Безопасность Web-ресурсов</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="u-visually-hidden">Меню</span>
+        </button>
+        <ul class="p-navigation__list" id="primary-menu" role="menu">
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="intro-pages-menu"
+          >
+            Введение
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="intro-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="../../index.html" data-page="hero">Главная</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="importance.html" data-page="importance">Почему важно</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="risks.html" data-page="risks">Угрозы</a></li>
+          </ul>
+        </li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="resources.html" data-page="resources">Ресурсы</a></li>
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="extra-pages-menu"
+          >
+            Дополнительно
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="extra-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="monitoring.html" data-page="monitoring">Мониторинг и аудит</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" aria-current="page" role="menuitem" href="incident-response.html" data-page="incident-response">Реагирование на инциденты</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="policy.html" data-page="policy">Обучение и политика</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page">
+      <article class="page__main" aria-labelledby="ir-overview">
+        <header id="ir-overview" class="hero">
+          <h1>Реагирование на инциденты: подготовка и отработка</h1>
+          <p>
+            Инциденты неизбежны, поэтому важнее всего скорость и качество реакции. Формализованный план действий сокращает время простоя,
+            помогает координировать команды и снижает юридические и репутационные последствия.
+          </p>
+        </header>
+
+        <section id="team" class="section">
+          <h2>Формирование команды реагирования</h2>
+          <p>
+            Определите роли заранее: координатор инцидента, аналитик, представитель бизнеса, специалист по коммуникациям. Зафиксируйте каналы
+            связи и порядок эскалации, протестируйте альтернативные контакты на случай недоступности основных.
+          </p>
+        </section>
+
+        <section id="playbooks" class="section">
+          <h2>Плейбуки и сценарии</h2>
+          <p>
+            Подготовьте набор сценариев для типовых угроз: утечка данных, компрометация учётных записей, заражение вредоносным ПО. Каждый плейбук
+            должен включать шаги по изоляции, расследованию, устранению и восстановлению, а также критерии завершения.
+          </p>
+          <p>
+            Обновляйте плейбуки после каждого инцидента. Ретроспективы помогают найти пробелы и улучшить инструменты мониторинга и автоматизации.
+          </p>
+        </section>
+
+        <section id="communication" class="section">
+          <h2>Коммуникация и документирование</h2>
+          <p>
+            Создайте шаблоны уведомлений для внутренних и внешних стейкхолдеров, учитывающие юридические требования и правила раскрытия информации.
+            Все действия фиксируйте в журнале инцидента — эти записи пригодятся для аудита и анализа.
+          </p>
+        </section>
+      </article>
+
+      <aside class="page__aside" aria-label="Навигация по статье">
+        <nav class="toc">
+          <h2 class="toc__title">Содержание</h2>
+          <ol class="toc__list">
+            <li><a href="#team">Команда реагирования</a></li>
+            <li><a href="#playbooks">Плейбуки</a></li>
+            <li><a href="#communication">Коммуникация</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__columns">
+      <div class="site-footer__column">
+        <p>© 2025 Безопасность Web-ресурсов. Все права защищены.</p>
+        <p>Ознакомление с основами безопасности Web-ресурсов</p>
+        <p><a href="mailto:stonuv@gmail.com">Связаться с командой</a></p>
+      </div>
+
+      <div class="site-footer__column">
+        <p>Vanilla framework</p>
+        <p><a href="https://vanillaframework.io/">Официальный сайт фреймворка</a></p>
+        <p><a href="https://github.com/canonical/vanilla-framework">Vanilla framework github</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../scripts/navigation.js" defer></script>
+</body>
+</html>

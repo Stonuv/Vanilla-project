@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/styles/style.css">
+  <title>Ресурсы по безопасности</title>
+</head>
+<body>
+  <header>
+    <nav class="p-navigation" aria-label="Основная навигация">
+      <div class="p-navigation__inner">
+        <a class="brand" href="../../index.html">
+          <img class="brand__logo" src="../images/logo.png" alt="Логотип — Безопасность Web-ресурсов" width="40" height="40">
+          <span class="brand__name">Безопасность Web-ресурсов</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="u-visually-hidden">Меню</span>
+        </button>
+        <ul class="p-navigation__list" id="primary-menu" role="menu">
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="intro-pages-menu"
+          >
+            Введение
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="intro-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="../../index.html" data-page="hero">Главная</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="importance.html" data-page="importance">Почему важно</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="risks.html" data-page="risks">Угрозы</a></li>
+          </ul>
+        </li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" href="checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" aria-current="page" href="resources.html" data-page="resources">Ресурсы</a></li>
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="extra-pages-menu"
+          >
+            Дополнительно
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="extra-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="monitoring.html" data-page="monitoring">Мониторинг и аудит</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="incident-response.html" data-page="incident-response">Реагирование на инциденты</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="policy.html" data-page="policy">Обучение и политика</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page">
+      <article class="page__main" aria-labelledby="hero">
+        <header id="hero" class="hero">
+          <h1>Рекомендованные материалы</h1>
+          <p>
+            Кроме статьи MDN, есть множество источников, которые помогут структурировать защиту приложения, понять типовые риски
+            и внедрить лучшие практики в разработку.
+          </p>
+          <p>
+            Соберите собственную библиотеку знаний: фиксируйте полезные статьи, доклады и чек-листы, которые пригодились команде. Пересматривайте
+            подборку минимум раз в квартал, чтобы исключать устаревшие ссылки и добавлять новые темы.
+          </p>
+        </header>
+
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/zYLkdT731x8" title="Cybersecurity in 8 minutes" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <section id="resources-reading" class="section">
+          <h2>Читать</h2>
+          <ul>
+            <li><a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security" target="_blank" rel="noopener">MDN: безопасность веб-сайта</a> — базовые понятия, угрозы и план действий.</li>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener">OWASP Top Ten</a> — список наиболее критичных рисков для веб-приложений.</li>
+            <li><a href="https://cheatsheetseries.owasp.org/" target="_blank" rel="noopener">OWASP Cheat Sheets</a> — практичные шпаргалки для реализации конкретных защит.</li>
+            <li><a href="https://www.cisa.gov/resources-tools" target="_blank" rel="noopener">CISA Resources</a> — руководства и рекомендации по защите инфраструктуры и реагированию на инциденты.</li>
+            <li><a href="https://bishopfox.com/blog" target="_blank" rel="noopener">Bishop Fox Blog</a> — исследования атак и методы их предотвращения от практикующих специалистов.</li>
+          </ul>
+        </section>
+
+        <section id="resources-practices" class="section">
+          <h2>Инструменты и практики</h2>
+          <ul>
+            <li>Подписка на рассылки безопасности (например, CERT, USENIX) помогает узнавать о новых уязвимостях.</li>
+            <li>Инструменты статического анализа и сканеры зависимостей обнаруживают проблемы до выхода в продакшен.</li>
+            <li>Bug bounty и ответственный приём сообщений о проблемах делают защиту непрерывной.</li>
+            <li>Песочницы и среды для отладки (Burp Suite, OWASP ZAP) помогают воспроизводить уязвимости и обучать команду.</li>
+          </ul>
+        </section>
+
+        <section id="resources-learning" class="section">
+          <h2>Онлайн-курсы и сообщества</h2>
+          <p>
+            Непрерывное обучение позволяет поддерживать актуальные навыки. Воспользуйтесь платформами, где преподаватели делятся практическим опытом,
+            а студенты могут задавать вопросы и решать реальные кейсы.
+          </p>
+          <ul>
+            <li><a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Academy</a> — интерактивные лаборатории по веб-безопасности.</li>
+            <li><a href="https://www.coursera.org/specializations/ibm-cybersecurity-analyst" target="_blank" rel="noopener">Coursera: Cybersecurity Analyst</a> — серия курсов по построению безопасности и реагированию.</li>
+            <li><a href="https://owasp.org/www-chapter/" target="_blank" rel="noopener">Локальные OWASP-чаптеры</a> — встречи с экспертами и обмен практиками в вашем городе.</li>
+          </ul>
+        </section>
+
+        <section id="resources-process" class="section">
+          <h2>Как внедрять знания</h2>
+          <p>
+            Сбор ресурсов — лишь первый шаг. Создайте процесс, чтобы новые знания превращались в действия: расписание внутренних митапов,
+            обязательные обзоры перед релизом, задачи в backlog. Нарабатывайте библиотеку внутренних гайдлайнов и шаблонов, основанных на изученных материалах.
+          </p>
+          <p>
+            Назначьте куратора, который будет следить за релевантностью ссылок, проводить ретроспективы обучения и помогать команде адаптировать
+            лучшие практики к вашему продукту. Без такого медиатора ресурсы быстро превращаются в пассивный список ссылок.
+          </p>
+        </section>
+      </article>
+
+      <aside class="page__aside" aria-label="Навигация по статье">
+        <nav class="toc">
+          <h2 class="toc__title">Содержание</h2>
+          <ol class="toc__list">
+            <li><a href="#hero">Введение</a></li>
+            <li><a href="#resources-reading">Читать</a></li>
+            <li><a href="#resources-practices">Инструменты и практики</a></li>
+            <li><a href="#resources-learning">Курсы и сообщества</a></li>
+            <li><a href="#resources-process">Внедрение знаний</a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__columns">
+      <div class="site-footer__column">
+        <p>© 2025 Безопасность Web-ресурсов. Все права защищены.</p>
+        <p>Ознакомление с основами безопасности Web-ресурсов</p>
+        <p><a href="mailto:stonuv@gmail.com">Связаться с командой</a></p>
+      </div>
+
+      <div class="site-footer__column">
+        <p>Vanilla framework</p>
+        <p><a href="https://vanillaframework.io/">Официальный сайт фреймворка</a></p>
+        <p><a href="https://github.com/canonical/vanilla-framework">Vanilla framework github</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../scripts/navigation.js" defer></script>
+</body>
+</html>

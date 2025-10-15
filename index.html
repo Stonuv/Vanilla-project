@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="dist/styles/style.css">
   <title>Безопасность веб-сайта</title>
 </head>
 <body>
   <header>
     <nav class="p-navigation" aria-label="Основная навигация">
+<<<<<<< HEAD
       <div class="navigation__logo">
         <a href="index.html" class="logo" aria-label="На главную">LOGO</a>
       </div>
@@ -21,6 +22,57 @@
         <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="checklist.html" data-page="checklist">Чек-лист</a></li>
         <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="resources.html" data-page="resources">Ресурсы</a></li>
       </ul>
+=======
+      <div class="p-navigation__inner">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="src/images/logo.png" alt="Логотип — Безопасность Web-ресурсов" width="40" height="40">
+          <span class="brand__name">Безопасность Web-ресурсов</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="u-visually-hidden">Меню</span>
+        </button>
+        <ul class="p-navigation__list" id="primary-menu" role="menu">
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="intro-pages-menu"
+          >
+            Введение
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="intro-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" aria-current="page" role="menuitem" href="index.html" data-page="hero">Главная</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="src/pages/importance.html" data-page="importance">Почему важно</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="src/pages/risks.html" data-page="risks">Угрозы</a></li>
+          </ul>
+        </li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="src/pages/controls.html" data-page="controls">Меры защиты</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="src/pages/checklist.html" data-page="checklist">Чек-лист</a></li>
+        <li class="p-navigation__item"><a class="p-navigation__link" role="menuitem" href="src/pages/resources.html" data-page="resources">Ресурсы</a></li>
+        <li class="p-navigation__item p-navigation__item--submenu js-has-dropdown">
+          <button
+            class="p-navigation__link p-navigation__link--toggle js-dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="extra-pages-menu"
+          >
+            Дополнительно
+          </button>
+          <ul class="p-navigation__submenu js-dropdown-menu" id="extra-pages-menu" role="menu" hidden>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="src/pages/monitoring.html" data-page="monitoring">Мониторинг и аудит</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="src/pages/incident-response.html" data-page="incident-response">Реагирование на инциденты</a></li>
+            <li class="p-navigation__submenu-item"><a class="p-navigation__link" role="menuitem" href="src/pages/policy.html" data-page="policy">Обучение и политика</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+>>>>>>> main
     </nav>
   </header>
 
@@ -63,6 +115,10 @@
       </div>
     </div>
   </footer>
+<<<<<<< HEAD
 
+=======
+  <script src="src/scripts/navigation.js" defer></script>
+>>>>>>> main
 </body>
 </html>
