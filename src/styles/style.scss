@@ -487,3 +487,9 @@ main {
     padding: 2.5rem 0;
   }
 }
+
+@media (max-width: 400px) {
+  .brand__name {
+    display: none;
+  }
+}
