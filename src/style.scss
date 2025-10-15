@@ -154,6 +154,19 @@ $color-accent: #7cf0ee;
   padding: 2rem 1.5rem;
   text-align: center;
 
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  &__column {
+    display: grid;
+    gap: .5rem;
+  }
+
   p {
     margin: .5rem 0;
   }
@@ -169,6 +182,7 @@ $color-accent: #7cf0ee;
     }
   }
 }
+
 
 @media (max-width: 960px) {
   .page {
